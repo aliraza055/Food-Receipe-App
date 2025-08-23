@@ -1,5 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:receipe_app/Models/category_model.dart';
+import 'package:receipe_app/views/explore_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -17,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const MyHomePage(),
+      home: const ExplorePage(),
     );
   }
 }
@@ -43,9 +45,11 @@ class _MyHomePageState extends State<MyHomePage> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
 Center(child: Text('tanzeel',style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold))) ,
-Image.network('https://res.cloudinary.com/dhob4di7g/image/upload/v1755794243/admin_orders_jzbk7x.jpg',height: 100,width: 100,),
 SizedBox(height:30),
-Image.network('https://res.cloudinary.com/dhob4di7g/image/upload/v1755949319/resort_dxumfn.png',height: 100,width: 100,)
+ElevatedButton(onPressed: ()async{
+  await SendData().setData();
+
+}, child: Text("Upload data"))
 
 ,       ],
       ),
