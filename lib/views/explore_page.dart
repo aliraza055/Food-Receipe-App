@@ -28,7 +28,6 @@ class _ExplorePageState extends State<ExplorePage> {
                       itemCount: item.length,
                       itemBuilder: (context,index){
                       return  Container(
-                        height: 50,
                         margin: EdgeInsets.all(12),
                         padding: EdgeInsets.all(10),
                         color: Colors.transparent,
