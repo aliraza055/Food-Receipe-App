@@ -33,7 +33,7 @@ class _ExplorePageState extends State<ExplorePage> {
                         color: Colors.transparent,
                         child: Column(
                           children: [
-                            Image.network(item[index]['image'],height: 50,width: 50,),
+                           Image.network(item[index]['image'],height: 50,width: 50,),
                            Text(item[index]['name']),
                           ],
                         ),);
