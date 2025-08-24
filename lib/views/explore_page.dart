@@ -21,9 +21,7 @@ class _ExplorePageState extends State<ExplorePage> {
               child: StreamBuilder(
                 stream: FirebaseFirestore.instance.collection("categories").snapshots(), 
                 builder: (context,snapshot){
-                  if(snapshot.hasError){
-                    print("you have an error");
-                  } else if(snapshot.hasData ){
+                  if(snapshot.hasData ){
                     final item=snapshot.data!.docs;
                     return ListView.builder(
                       scrollDirection: Axis.horizontal,
