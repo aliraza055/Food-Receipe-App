@@ -10,6 +10,7 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
+  int index=0;
   List pages=[
     ExplorePage(),  
     FavoriteItem(),
@@ -21,6 +22,11 @@ class _MainPageState extends State<MainPage> {
     return Scaffold(
       body: pages[0],
       bottomNavigationBar: BottomNavigationBar(
+        onTap: (value) {
+           setState(() {
+            index=value;
+           });          
+        },
         items: [
         BottomNavigationBarItem(icon: Icon(Icons.home),label: 'home'),
         BottomNavigationBarItem(icon: Icon(Icons.favorite),label: 'favorite'),
