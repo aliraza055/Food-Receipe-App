@@ -22,22 +22,24 @@ class _MainPageState extends State<MainPage> {
     print("built all");
     return Scaffold(
       body: pages[index],
-      backgroundColor: Colors.white,
       bottomNavigationBar: BottomNavigationBar(
-        selectedItemColor: Colors.blue.shade100,
+        selectedItemColor: Colors.blue,
         unselectedItemColor: Colors.black,
-        backgroundColor: Colors.white,
+        currentIndex: index,
+      //  type: BottomNavigationBarType.fixed,
+        selectedFontSize: 16,
+      //  backgroundColor: Colors.white,
         onTap: (value) {
            setState(() {
             index=value;
            });          
         },
         items: [
-        BottomNavigationBarItem(icon: Icon(Icons.home,color: Colors.black,),label: 'home'),
-        BottomNavigationBarItem(icon: Icon(Icons.favorite,color: Colors.black,),label: 'favorite'),
-        BottomNavigationBarItem(icon: Icon(Icons.search,color: Colors.black,),label: 'serach'),
-        BottomNavigationBarItem(icon: Icon(Icons.person,color: Colors.black,),label: 'profile'),
-
+        BottomNavigationBarItem(icon: Icon(Icons.home,),label: 'home'),
+        BottomNavigationBarItem(icon: Icon(Icons.favorite,),label: 'favorite'),
+        BottomNavigationBarItem(icon: Icon(Icons.search,),label: 'serach'),
+        BottomNavigationBarItem(icon: Icon(Icons.person,),label: 'profile'),
+      
       ]),
     );
   }
