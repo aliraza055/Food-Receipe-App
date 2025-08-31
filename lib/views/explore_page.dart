@@ -10,7 +10,7 @@ class ExplorePage extends StatefulWidget {
 }
 
 class _ExplorePageState extends State<ExplorePage> {
-  int selectedIndex = 0; // track selected category
+  int selectedIndex = 0; 
 
   @override
   Widget build(BuildContext context) {
